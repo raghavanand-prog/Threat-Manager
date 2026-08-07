@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis Threat Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo-section">
+            <h1>🛡 AEGIS THREAT MANAGER</h1>
+            <p>Security Operations Console</p>
+        </div>
+
+        <div class="status">
+    ● ONLINE
+</div>
+
+    </header>
+
+    <main class="container">
+
+    <section class="top-section">
+
+  
+    <div class="left-panel">
+
+        <div class="card form-card">
+
+            <h2>Register Threat</h2>
+
+            <form id="threatForm">
+
+                <input
+                    type="text"
+                    id="threatName"
+                    placeholder="Threat Name"
+                    required>
+
+                <select id="severity" required>
+
+                    <option value="">Select Severity</option>
+                    <option>Critical</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+
+                </select>
+
+                <input
+                    type="text"
+                    id="category"
+                    placeholder="Category"
+                    required>
+
+                <button type="submit">
+                    Register Threat
+                </button>
+
+            </form>
+            <div class="card details-card">
+
+    <h2>🛡 Threat Details</h2>
+
+    <div class="detail-row">
+        <span>Threat Name</span>
+        <strong id="detailName">No Threat Selected</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Severity</span>
+        <strong id="detailSeverity">-</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Category</span>
+        <strong id="detailCategory">-</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Priority</span>
+        <strong id="detailPriority">-</strong>
+    </div>
+
+    <div class="detail-box">
+
+        <h3>Recommended Response</h3>
+
+        <p id="detailAction">
+            Select or edit a threat to view recommendations.
+        </p>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+   
+    <div class="right-panel">
+
+       
+        <div class="card stats-card">
+
+            <h2>Threat Overview</h2>
+
+            <div class="stat">
+                <span>📊 Total Threats</span>
+                <span id="totalThreats">0</span>
+            </div>
+
+            <div class="stat">
+                <span>🔴 Critical</span>
+                <span id="criticalCount">0</span>
+            </div>
+
+            <div class="stat">
+                <span>🟠 High</span>
+                <span id="highCount">0</span>
+            </div>
+
+            <div class="stat">
+                <span>🟡 Medium</span>
+                <span id="mediumCount">0</span>
+            </div>
+
+            <div class="stat">
+                <span>🟢 Low</span>
+                <span id="lowCount">0</span>
+            </div>
+
+        </div>
+
+       
+
+</section>   
+
+   
+
+    <hr>
+
+    <div class="risk-card">
+
+        <h3>🛡 System Status</h3>
+
+        <div id="systemRisk" class="risk low-risk">
+            LOW RISK
+        </div>
+
+    </div>
+
+</div>
+<div class="card intelligence-card">
+
+    <h2>🛡 Security Intelligence</h2>
+
+    <div class="intel-item">
+        <span>System Risk</span>
+        <strong id="systemRisk">LOW</strong>
+    </div>
+
+    <div class="intel-item">
+        <span>Latest Threat</span>
+        <strong id="latestThreat">None</strong>
+    </div>
+
+    <div class="intel-item">
+        <span>Backend Status</span>
+        <strong class="online">ONLINE</strong>
+    </div>
+
+    <div class="intel-item">
+        <span>Last Updated</span>
+        <strong id="lastUpdated">--:--:--</strong>
+    </div>
+
+</div>
+   
+
+        </section>
+
+        <section class="feed-section">
+
+            <h2>Active Threat Feed</h2>
+
+            <div id="threatContainer">
+
+               
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
