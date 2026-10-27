@@ -1,6 +1,18 @@
 # 🛡 Aegis Threat Manager
 
-A lightweight threat-tracking dashboard: register security threats with a severity and category, view details, and manage an active threat feed through a REST API.
+**A simple dashboard for logging security threats, rating how serious each one is, and tracking which are still active.**
+
+Why it exists: a small practice project for building a REST API with Express and a plain JavaScript front end.
+
+## How to run
+
+1. `cd backend && npm install`
+2. `node server.js`
+3. Open `frontend/index.html` in your browser. Data is kept in memory, so it resets when the server restarts.
+
+---
+
+## Technical details
 
 ## Features
 - Register, view, update and delete threats
@@ -21,12 +33,3 @@ A lightweight threat-tracking dashboard: register security threats with a severi
 | PUT | `/threats/:id` | Update a threat |
 | DELETE | `/threats/:id` | Delete a threat |
 
-## Getting started
-```bash
-cd backend
-npm install
-node server.js
-```
-Then open `frontend/index.html` in your browser.
-
-> Data is stored in memory, so it resets when the server restarts.
